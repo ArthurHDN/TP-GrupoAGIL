@@ -26,5 +26,5 @@
 
 
 ### Referências
-[Como fazer um README bonitão](https://raullesteves.medium.com/github-como-fazer-um-readme-md-bonitão-c85c8f154f8)
-[Engenharia de Software Moderna](https://engsoftmoderna.info)
+- [Como fazer um README bonitão](https://raullesteves.medium.com/github-como-fazer-um-readme-md-bonitão-c85c8f154f8)
+- [Engenharia de Software Moderna](https://engsoftmoderna.info)
