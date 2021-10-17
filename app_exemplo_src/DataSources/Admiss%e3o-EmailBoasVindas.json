@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "87566d62-914b-40c5-b96a-17e4561d57ac",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Admissão-EmailBoasVindas",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

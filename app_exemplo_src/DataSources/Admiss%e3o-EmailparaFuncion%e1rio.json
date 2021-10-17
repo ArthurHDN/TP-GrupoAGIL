@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "7acbfea2-6a61-45ca-a9f1-ac14d0554fe4",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Admissão-EmailparaFuncionário",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]

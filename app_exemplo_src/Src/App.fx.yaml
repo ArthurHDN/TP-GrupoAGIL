@@ -1,0 +1,26 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Concurrent(
+            ClearCollect(colAdmissao,'[DPE_001] Admissão'),
+            ClearCollect(colCentrosdeCusto,'[DPE_001] Centros de Custo'),
+            ClearCollect(colDepartamentos,'[DPE_001] Departamentos'),
+            ClearCollect(colCargos,'[DPE_001] Cargos'),
+            ClearCollect(colPermissoes,'[DPE_001] Permissões'),
+            ClearCollect(colGestores,'[DPE_001] Gestores'),
+            ClearCollect(colDependentes,'[DPE_001] Dependentes'),
+            ClearCollect(colClientes,'[DPE_001] Clientes'),
+            ClearCollect(colTiposTreinamento,'[DPE_001] Tipos de Treinamento')
+        );
+            
+        Set(varPermissionsDev,!IsBlank(LookUp(colPermissoes,Title=User().Email)));
+        Set(varPermissionsAdmin,!IsBlank(LookUp(colPermissoes,Admin=User().Email)));
+        Set(varPermissionsRH,!IsBlank(LookUp(colPermissoes,Step1=User().Email)));
+        Set(varPermissionsDP,!IsBlank(LookUp(colPermissoes,Step2=User().Email)));
+        Set(varPermissionsCCI,!IsBlank(LookUp(colPermissoes,Step3=User().Email)));
+        Set(varPermissionsDelete,!IsBlank(LookUp(colPermissoes,Delete=User().Email)));
+        Set(varStatusFilter,"Pendente");Set(varSearchText,"");Set(varSelectedMenu,1);
+        Set(varOrderBy,LateralBar_1.Order1Column);Set(varSortBy,"Ascending");
+        Set(varExpandedMenu,true);
+        Set(varExpandedMenu,false)
+

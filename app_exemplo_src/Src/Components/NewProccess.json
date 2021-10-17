@@ -1,0 +1,38 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "NewProccess",
+    "TemplateGuid": "bfcb56c1e31e4460a0d3c45f873e4df1"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Theme",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Theme",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637700096200222982",
+  "Name": "bfcb56c1e31e4460a0d3c45f873e4df1",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "d883c80203a8490ea5011216769e2f13",
+  "Version": "637699203511458227"
+}

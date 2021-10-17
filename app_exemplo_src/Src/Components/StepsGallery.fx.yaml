@@ -1,0 +1,1514 @@
+StepsGallery As CanvasComponent:
+    ColorCritical: =RGBA(215,0,16,1)
+    DisplayMode1: =If(StepsGallery.SelectedItem.'Etapa Atual'>=1,Edit,View)
+    DisplayMode10: =If(StepsGallery.SelectedItem.'Etapa Atual'>=1,Edit,View)
+    DisplayMode2: =If(StepsGallery.SelectedItem.'Etapa Atual'>=2,Edit,View)
+    DisplayMode3: =If(StepsGallery.SelectedItem.'Etapa Atual'>=3,Edit,View)
+    DisplayMode4: =If(StepsGallery.SelectedItem.'Etapa Atual'>=4,Edit,View)
+    DisplayMode5: =If(StepsGallery.SelectedItem.'Etapa Atual'>=5,Edit,View)
+    DisplayMode6: =If(StepsGallery.SelectedItem.'Etapa Atual'>=6,Edit,View)
+    DisplayMode7: =If(StepsGallery.SelectedItem.'Etapa Atual'>=7,Edit,View)
+    DisplayMode8: =If(StepsGallery.SelectedItem.'Etapa Atual'>=1,Edit,View)
+    DisplayMode9: =If(StepsGallery.SelectedItem.'Etapa Atual'>=1,Edit,View)
+    Fill: =RGBA(0, 0, 0, 0)
+    galWidth: =galSteps.Width
+    Height: =768
+    Items: |-
+        =Table({Title: "AAA", 'Etapa Atual': 3,
+            Status: "Pendente",
+            OData__x0031_NomeColaborador:"João",
+        
+            OData__x0031_Timestamp:Now(),
+            OData__x0032_Timestamp:Now(),
+            OData__x0033_Timestamp:Now(),
+            OData__x0034_Timestamp:Now(),
+            OData__x0035_Timestamp:Now(),
+            OData__x0036_Timestamp:Now(),
+            OData__x0037_Timestamp:Now(),
+            OData__x0038_Timestamp:Now(),
+            OData__x0039_Timestamp:Now(),
+            OData__x00310_Timestamp:Now(),
+        
+            OData__x0031_Responsavel:"aaa",
+            OData__x0032_Responsavel:"aaa",
+            OData__x0033_Responsavel:"aaa",
+            OData__x0034_Responsavel:"aaa",
+            OData__x0035_Responsavel:"aaa",
+            OData__x0036_Responsavel:"aaa",
+            OData__x0037_Responsavel:"aaa",
+            OData__x0038_Responsavel:"aaa",
+            OData__x0039_Responsavel:"aaa",
+            OData__x00310_Responsavel:"aaa",
+        
+            Finalizadopor:"bbb",
+            FinalizadoTimestamp:Now(),
+        
+            '{HasAttachments}': true,
+            '{Link}': "https://www.google.com"
+        })
+    LineLength: =75
+    PermissionsAdmin: =true
+    PermissionsDelete: =true
+    PermissionsDev: =true
+    PermissionsStep1: =true
+    PermissionsStep10: =true
+    PermissionsStep2: =true
+    PermissionsStep3: =true
+    PermissionsStep4: =true
+    PermissionsStep5: =true
+    PermissionsStep6: =true
+    PermissionsStep7: =true
+    PermissionsStep8: =true
+    PermissionsStep9: =true
+    SelectedItem: =galSteps.Selected
+    ShowName: =true
+    StartPositionX: =42
+    StartPositionY: =70
+    StepLabel1: =varLabelStep1
+    StepLabel10: =varLabelStep10
+    StepLabel2: =varLabelStep2
+    StepLabel3: =varLabelStep3
+    StepLabel4: =varLabelStep4
+    StepLabel5: =varLabelStep5
+    StepLabel6: =varLabelStep6
+    StepLabel7: =varLabelStep7
+    StepLabel8: =varLabelStep8
+    StepLabel9: =varLabelStep9
+    StepsColorCurrent: =White
+    StepsColorPending: =RGBA(230, 230, 230, 1)
+    StepsColorSuccess: =RGBA(215,0,16,1)
+    StepsNumber: |-
+        =//10 max
+        6
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    galSteps As gallery.galleryVertical:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =1
+        Height: =StepsGallery.Height
+        Items: =StepsGallery.Items
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplateSize: =169
+        Width: =StepsGallery.Width
+        ZIndex: =1
+
+        tmrConfirmDeletion As timer:
+            Duration: =5000
+            Fill: =RGBA(100, 118, 132, 1)
+            Height: =30
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            OnSelect: =Select(Parent)
+            OnTimerEnd: =Set(varDeleteItem,false) 
+            Reset: =!varDeleteItem || varCurrentItem.Title <> ThisItem.Title
+            Start: =varDeleteItem && varCurrentItem.Title = ThisItem.Title
+            Visible: =false
+            Width: =1
+            X: =156
+            Y: =10
+            ZIndex: =1
+
+        lblProtocol As label:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
+            Size: =15
+            Text: =If(StepsGallery.ShowName,ThisItem.Title & " - " & ThisItem.OData__x0031_NomeColaborador,ThisItem.Title)
+            Width: =900
+            X: =38
+            Y: =10
+            ZIndex: =2
+
+        icoDelete As icon.Trash:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =27
+            Icon: =Icon.Trash
+            OnSelect: =Set(varDeleteItem,true);Set(varCurrentItem,ThisItem);
+            Visible: =StepsGallery.PermissionsDelete || StepsGallery.PermissionsAdmin || StepsGallery.PermissionsDev
+            Width: =25
+            X: =707
+            Y: =76
+            ZIndex: =3
+
+        btnConfirmDeletion As button:
+            BorderStyle: =BorderStyle.None
+            ContentLanguage: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 1)
+            DisabledColor: =Self.Color
+            DisabledFill: =Self.Fill
+            Fill: =StepsGallery.ColorCritical
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =27
+            HoverBorderColor: =Self.BorderColor
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill,-15%)
+            OnSelect: =Set(varActionConfirmDelete,true)
+            PaddingBottom: =7
+            PaddingLeft: =8
+            PressedColor: =Self.Color
+            PressedFill: =ColorFade(Self.Fill,-20%)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =9
+            Text: ="Confirmar cancelamento"
+            Visible: =varDeleteItem && varCurrentItem.Title = ThisItem.Title
+            X: =icoDelete.X+35
+            Y: =76
+            ZIndex: =4
+
+        icoAttachments As icon.Attachment:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =27
+            Icon: =Icon.PaperClip
+            OnSelect: =Set(varAttachmentAction,true);
+            Visible: =ThisItem.'{HasAttachments}'
+            Width: =26
+            X: =677
+            Y: =76
+            ZIndex: =7
+
+        shpProtocolDivider As rectangle:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =0.5
+            Width: =325
+            X: =43
+            Y: =47
+            ZIndex: =8
+
+        shpStep12 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep1.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep2.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =StepsGallery.StartPositionY+20
+            ZIndex: =9
+
+        shpStep23 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep2.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep3.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =10
+
+        shpStep34 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep3.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep4.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =11
+
+        shpStep45 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep4.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep5.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =12
+
+        shpStep56 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep5.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep6.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =13
+
+        shpStep67 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep6.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep7.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =14
+
+        shpStep78 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep7.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep8.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =15
+
+        shpStep89 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep8.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep9.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =16
+
+        shpStep910 As rectangle:
+            AccessibleLabel: =Text(Value(shpCircleStep9.AccessibleLabel)+1)
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' >= Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    StepsGallery.StepsColorPending
+                )
+            Height: =3
+            Visible: =shpCircleStep10.Visible
+            Width: =StepsGallery.LineLength
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*shpCircleStep1.Width+(Value(Self.AccessibleLabel)-2)*StepsGallery.LineLength
+            Y: =shpStep12.Y
+            ZIndex: =17
+
+        shpCircleStep1 As circle:
+            AccessibleLabel: ="1"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode1
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,1);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX
+            Y: =StepsGallery.StartPositionY
+            ZIndex: =18
+
+        shpCircleStep2 As circle:
+            AccessibleLabel: ="2"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode2
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,2);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =19
+
+        shpCircleStep3 As circle:
+            AccessibleLabel: ="3"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode3
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,3);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =20
+
+        shpCircleStep4 As circle:
+            AccessibleLabel: ="4"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode4
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,4);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =21
+
+        shpCircleStep5 As circle:
+            AccessibleLabel: ="5"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode5
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,5);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =22
+
+        shpCircleStep6 As circle:
+            AccessibleLabel: ="6"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode6
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,6);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =23
+
+        shpCircleStep7 As circle:
+            AccessibleLabel: ="7"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode7
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,7);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =24
+
+        shpCircleStep8 As circle:
+            AccessibleLabel: ="8"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode8
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,8);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =25
+
+        shpCircleStep9 As circle:
+            AccessibleLabel: ="9"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode9
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,9);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =26
+
+        shpCircleStep10 As circle:
+            AccessibleLabel: ="10"
+            BorderColor: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            BorderThickness: =2
+            DisplayMode: =StepsGallery.DisplayMode10
+            Fill: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorSuccess,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorCurrent,
+                        StepsGallery.StepsColorPending
+                    )
+                )
+            Height: =40
+            OnSelect: =Set(varStepAction,10);
+            Tooltip: |-
+                =If(ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                "Etapa concluída em: " 
+                & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Timestamp,
+                                2,ThisItem.OData__x0032_Timestamp,
+                                3,ThisItem.OData__x0033_Timestamp,
+                                4,ThisItem.OData__x0034_Timestamp,
+                                5,ThisItem.OData__x0035_Timestamp,
+                                6,ThisItem.OData__x0036_Timestamp,
+                                7,ThisItem.OData__x0037_Timestamp,
+                                8,ThisItem.OData__x0038_Timestamp,
+                                9,ThisItem.OData__x0039_Timestamp,
+                                10,ThisItem.OData__x00310_Timestamp             
+                                ) 
+                & Char(10) & "Responsável: " & Char(10) & Switch(Value(Self.AccessibleLabel),
+                                1,ThisItem.OData__x0031_Responsavel,
+                                2,ThisItem.OData__x0032_Responsavel,
+                                3,ThisItem.OData__x0033_Responsavel,
+                                4,ThisItem.OData__x0034_Responsavel,
+                                5,ThisItem.OData__x0035_Responsavel,
+                                6,ThisItem.OData__x0036_Responsavel,
+                                7,ThisItem.OData__x0037_Responsavel,
+                                8,ThisItem.OData__x0038_Responsavel,
+                                9,ThisItem.OData__x0039_Responsavel,
+                                10,ThisItem.OData__x00310_Responsavel)
+                )
+            Visible: =StepsGallery.StepsNumber >= Value(Self.AccessibleLabel)
+            Width: =40
+            X: =StepsGallery.StartPositionX+(Value(Self.AccessibleLabel)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =shpCircleStep1.Y
+            ZIndex: =27
+
+        icoStep1 As icon.Check:
+            AccessibleLabel: =shpCircleStep1.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep1.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep1)
+            Tooltip: =shpCircleStep1.Tooltip
+            Visible: =shpCircleStep1.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =StepsGallery.StartPositionY+10
+            ZIndex: =28
+
+        icoStep2 As icon.Check:
+            AccessibleLabel: =shpCircleStep2.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep2.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep2)
+            Tooltip: =shpCircleStep2.Tooltip
+            Visible: =shpCircleStep2.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =29
+
+        icoStep3 As icon.Check:
+            AccessibleLabel: =shpCircleStep3.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep3.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep3)
+            Tooltip: =shpCircleStep3.Tooltip
+            Visible: =shpCircleStep3.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =30
+
+        icoStep4 As icon.Check:
+            AccessibleLabel: =shpCircleStep4.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep4.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep4)
+            Tooltip: =shpCircleStep4.Tooltip
+            Visible: =shpCircleStep4.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =31
+
+        icoStep5 As icon.Check:
+            AccessibleLabel: =shpCircleStep5.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep5.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep5)
+            Tooltip: =shpCircleStep5.Tooltip
+            Visible: =shpCircleStep5.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =32
+
+        icoStep6 As icon.Check:
+            AccessibleLabel: =shpCircleStep6.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep6.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep6)
+            Tooltip: =shpCircleStep6.Tooltip
+            Visible: =shpCircleStep6.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =33
+
+        icoStep7 As icon.Check:
+            AccessibleLabel: =shpCircleStep7.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep7.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep7)
+            Tooltip: =shpCircleStep7.Tooltip
+            Visible: =shpCircleStep7.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =34
+
+        icoStep8 As icon.Check:
+            AccessibleLabel: =shpCircleStep8.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep8.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep8)
+            Tooltip: =shpCircleStep8.Tooltip
+            Visible: =shpCircleStep8.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =35
+
+        icoStep9 As icon.Check:
+            AccessibleLabel: =shpCircleStep9.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep9.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep9)
+            Tooltip: =shpCircleStep9.Tooltip
+            Visible: =shpCircleStep9.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =36
+
+        icoStep10 As icon.Check:
+            AccessibleLabel: =shpCircleStep10.AccessibleLabel
+            BorderColor: =RGBA(32, 54, 71, 1)
+            BorderStyle: =BorderStyle.None
+            Color: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    StepsGallery.StepsColorCurrent,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        StepsGallery.StepsColorSuccess,
+                        StepsGallery.StepsColorCurrent
+                    )
+                )
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self
+            DisplayMode: =shpCircleStep10.DisplayMode
+            Height: =20
+            HoverColor: =ColorFade(Self.Color, -10%)
+            Icon: |-
+                =If(
+                    ThisItem.'Etapa Atual' > Value(Self.AccessibleLabel),
+                    Check,
+                    If(
+                        ThisItem.'Etapa Atual' = Value(Self.AccessibleLabel),
+                        Waypoint,
+                        Blank()
+                    )
+                )
+            OnSelect: =Select(shpCircleStep10)
+            Tooltip: =shpCircleStep10.Tooltip
+            Visible: =shpCircleStep10.Visible
+            Width: =20
+            X: =(StepsGallery.StartPositionX)+10+(StepsGallery.LineLength+shpCircleStep1.Width)*(Value(Self.AccessibleLabel)-1)
+            Y: =icoStep1.Y
+            ZIndex: =37
+
+        lblStep1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            Size: =10
+            Text: =StepsGallery.StepLabel1
+            VerticalAlign: =VerticalAlign.Top
+            Width: =102
+            X: =StepsGallery.StartPositionX-31
+            Y: =StepsGallery.StartPositionY+52
+            ZIndex: =38
+
+        lblStep2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep2.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel2
+            VerticalAlign: =Top
+            Visible: =shpCircleStep2.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =39
+
+        lblStep3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep3.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel3
+            VerticalAlign: =Top
+            Visible: =shpCircleStep3.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =40
+
+        lblStep4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep4.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel4
+            VerticalAlign: =Top
+            Visible: =shpCircleStep4.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =41
+
+        lblStep5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep5.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel5
+            VerticalAlign: =Top
+            Visible: =shpCircleStep5.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =42
+
+        lblStep6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep6.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel6
+            VerticalAlign: =Top
+            Visible: =shpCircleStep6.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =43
+
+        lblStep7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep7.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel7
+            VerticalAlign: =Top
+            Visible: =shpCircleStep7.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =44
+
+        lblStep8 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep8.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel8
+            VerticalAlign: =Top
+            Visible: =shpCircleStep8.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =45
+
+        lblStep9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep9.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel9
+            VerticalAlign: =Top
+            Visible: =shpCircleStep9.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =46
+
+        lblStep10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            ContentLanguage: =shpCircleStep10.AccessibleLabel
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =StepsGallery.StepLabel10
+            VerticalAlign: =Top
+            Visible: =shpCircleStep10.Visible
+            Width: =102
+            X: =lblStep1.X+(Value(Self.ContentLanguage)-1)*(shpCircleStep1.Width+StepsGallery.LineLength)
+            Y: =lblStep1.Y
+            ZIndex: =47
+
+    lblNoItems As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =50
+        Size: =13
+        Text: ="Nenhum item " & If(varStatusFilter="Pendente","pendente","finalizado")
+        Visible: =CountRows(galSteps.AllItems)=0
+        Width: =galSteps.Width
+        Y: =410
+        ZIndex: =2
+
+    lblNoItemsSub As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        Height: =50
+        Size: =13
+        Text: ="Inicie um novo processo utilizando o botão de + "
+        Visible: =CountRows(galSteps.AllItems)=0
+        Width: =galSteps.Width
+        Y: =446
+        ZIndex: =3
+

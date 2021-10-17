@@ -1,0 +1,187 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "AppBar",
+    "TemplateGuid": "2e80f1c0747941c785f84c15a5fc68af"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Title",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Title",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Logo",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Logo",
+      "PropertyDataTypeKey": "Image",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ShowClock",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ShowClock",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "MyPermissionsTooltip",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "MyPermissionsTooltip",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Action1",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Action1",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Action2",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Action2",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Action3",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Action3",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Action4",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Action4",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon1",
+      "Hidden": false,
+      "Name": "Icon1",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon2",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon2",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon3",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon3",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon4",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon4",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ShowButton",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ShowButton",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ButtonIcon",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ButtonIcon",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ButtonText",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ButtonText",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ButtonWidth",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ButtonWidth",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637700096200313611",
+  "Name": "2e80f1c0747941c785f84c15a5fc68af",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "7432e90586c6444094027224e3fb96da",
+  "Version": "637699203511459140"
+}

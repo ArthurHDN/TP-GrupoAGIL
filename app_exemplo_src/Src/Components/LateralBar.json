@@ -1,0 +1,485 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": true,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "LateralBar",
+    "TemplateGuid": "88831621c25f45dca94de8eba33c4bcd"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "ThemeColor",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ThemeColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "SelectedMenu",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "SelectedMenu",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ExpandMenu",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ExpandMenu",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "NumberIcons",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "NumberIcons",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ShowMenuText",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ShowMenuText",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ExpandMenuWidth",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ExpandMenuWidth",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "BarHeight",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "BarHeight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "CollapseMenuWidth",
+      "Hidden": false,
+      "Name": "CollapseMenuWidth",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon1",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon1",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon2",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon2",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon3",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon3",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon4",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon4",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon5",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon5",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon6",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon6",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon7",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon7",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon8",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon8",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon9",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon9",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Icon10",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Icon10",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label1",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label1",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label2",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label2",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label3",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label3",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label4",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label4",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label5",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label5",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label6",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label6",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label7",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label7",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label8",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label8",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label9",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label9",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Label10",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Label10",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "ShowFilter",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "ShowFilter",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "FilterPosition",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "FilterPosition",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order1Label",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order1Label",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order2Label",
+      "Hidden": false,
+      "Name": "Order2Label",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order3Label",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order3Label",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order4Label",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order4Label",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order1Column",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order1Column",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order2Column",
+      "Hidden": false,
+      "Name": "Order2Column",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order3Column",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order3Column",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order4Column",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order4Column",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order1Width",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order1Width",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order2Width",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order2Width",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order3Width",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order3Width",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order4Width",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order4Width",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order1X",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order1X",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order2X",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order2X",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order3X",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order3X",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Order4X",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "Order4X",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.317\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637700096201632666",
+  "Name": "88831621c25f45dca94de8eba33c4bcd",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "55dde770189e44be90f822eb4ba7083d",
+  "Version": "637699203512559864"
+}

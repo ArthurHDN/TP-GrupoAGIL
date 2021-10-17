@@ -1,0 +1,9 @@
+[
+  {
+    "AddinConnectorId": "a9db3635-ffda-4489-8b68-9bd27d38cad9",
+    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
+    "Name": "Admissão-NotificarTeams",
+    "ServiceKind": "AddinWadl",
+    "Type": "ServiceInfo"
+  }
+]
