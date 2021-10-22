@@ -1,9 +1,0 @@
-[
-  {
-    "AddinConnectorId": "40edafc1-8d02-4cf0-9cc1-49b2c59f92fa",
-    "AddinId": "6d1f157d-95bf-406d-b65d-cfd3240f724e",
-    "Name": "Admissão-GerarProtocolo",
-    "ServiceKind": "AddinWadl",
-    "Type": "ServiceInfo"
-  }
-]
