@@ -1,30 +1,37 @@
-# Trabalho Prático - <título do projeto>
+# Trabalho Prático
+
+## Programa de Monitoria de Idiomas na UFMG
+
 ## DCC603 - Engenharia de Software
-- Arthur Henrique Dias Nunes -2018020670
-- Gabriel Pimentel Gomes - 2018020271
-- Igor Menezes Radichi - 2018020441
-- Lucas Gabriel Santana - 2018072476
+
+### Squad AGIL
+
+- **A**rthur Henrique Dias Nunes -2018020670
+- **G**abriel Pimentel Gomes - 2018020271
+- **I**gor Menezes Radichi - 2018020441
+- **L**ucas Gabriel Santana - 2018072476
 
 ### O Projeto
-<motivação e explicação do que será feito>
-### Requisitos
-#### Histórias de Usuário
-| Requerimento | As a | I want to | So that I |
-|--------------|------|-----------|-----------|
-| 1 | Student | Do a good homework | Learn and get good grades |
 
-#### Requisitos objetivos do trabalho
-- [x] Requisito 1
-- [x] Requisito 2
-- [x] Requisito 3
-- [x] Requisito 4
-- [ ] Taltal
-- [ ] taltaltal
-- [ ] seria bacana mas a gente nao vai fazer
+O projeto tem como objetivo conectar professores (graduados ou não) da UFMG - principalmente em Letras, com especialização em ensino de línguas - com alunos da universidade que desejam **aprender ou praticar um novo idioma**, a princípio gratuitamente. Seria uma **troca de experiências**, podendo evoluir para um acordo entre as partes que possa - ou não - envolver dinheiro e prolongar ou formalizar os encontros, o que dependeria exclusivamente das partes e não envolveria o escopo do app.
 
+#### Principais funcionalidades
 
+- cadastro de professores e alunos, atrelado ao domínio @ufmg
+- alunos podem procurar professores de acordo com o idioma e horário
+- professores podem aceitar ou não as solicitações
+- agendamento de evento no Teams em caso de aceite
 
+#### Tecnologias
+
+- Banco de dados (mySQL ou PostgreSQL)
+- On-premises gateway (ponte com a nuvem)
+- Power Platform (automations & app, na nuvem ou local)
+- Git/GitHub para versionamento de código
+  - Utilização de Actions no GitHub para automatizar exports
+  - Utilização de decompilador via PowerShell para descompactar app exportado
+- Office 365 (Teams, Outlook, etc)
 
 ### Referências
-- [Como fazer um README bonitão](https://raullesteves.medium.com/github-como-fazer-um-readme-md-bonitão-c85c8f154f8)
+
 - [Engenharia de Software Moderna](https://engsoftmoderna.info)
