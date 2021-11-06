@@ -11,6 +11,9 @@
 - **I**gor Menezes Radichi - 2018020441
 - **L**ucas Gabriel Santana - 2018072476
 
+### Como usar o Aplicativo
+TBA
+
 ### O Projeto
 
 O projeto tem como objetivo conectar professores (graduados ou não) da UFMG - principalmente em Letras, com especialização em ensino de línguas - com alunos da universidade que desejam **aprender ou praticar um novo idioma**, a princípio gratuitamente. Seria uma **troca de experiências**, podendo evoluir para um acordo entre as partes que possa - ou não - envolver dinheiro e prolongar ou formalizar os encontros, o que dependeria exclusivamente das partes e não envolveria o escopo do app.
@@ -45,59 +48,57 @@ Aula -> idioma/hora/professor
 - **L**ucas Gabriel Santana - **Frontend**
 
 #### Backlog do Sprint 1
-- História 0:
-
-| Tarefa | Responsável |
-|--------|-------------|
-| Explicar o versionamento do Frontend | Igor/Lucas |
-| Implementar o banco de dados em docker | Arthur |
-
 - História 1:
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Definir a estrutura do Banco de Dados para o usuário | Igor |
-| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur |
-| Adicionar tabela como fonte de dados | Gabriel |
-| Implementar a interface para o cadastro | Lucas |
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Definir a estrutura do Banco de Dados para o usuário | Igor | TODO |
+| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | TODO |
+| Adicionar tabela como fonte de dados | Gabriel | TODO |
+| Implementar a interface para o cadastro | Lucas | TODO |
 
 - História 2
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel |
-| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas |
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | TODO |
+| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | TODO |
 
 - História 4
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Implementar a pesquisa na tela | Lucas |
-| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel |
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Implementar a pesquisa na tela | Lucas | TODO |
+| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | TODO |
 
 - História 5
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Implementar a interface para solicitar a reserva de uma aula | Gabriel |
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Implementar a interface para solicitar a reserva de uma aula | Gabriel | TODO |
 
 - História 7
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur |
-| Implementar a estrutura no banco de dados | Igor |
-| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas |
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | TODO |
+| Implementar a estrutura no banco de dados | Igor | TODO |
+| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | TODO |
 
 - História 10
 
-| Tarefa | Responsável |
-|--------|-------------|
-| Automação com o Teams para marcar/desmarcar eventos | Igor |
-| Integrar automação à criação de Solicitações | Lucas | 
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Automação com o Teams para marcar/desmarcar eventos | Igor | TODO |
+| Integrar automação à criação de Solicitações | Lucas | TODO |
 
+- História 0 (Outras tarefas):
 
-
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Explicar o versionamento do Frontend | Lucas | TODO |
+| Criar Github Action | Igor | TODO |
+| Implementar o banco de dados em docker | Arthur | DOING |
 
 ### Tecnologias
 
@@ -111,6 +112,17 @@ Aula -> idioma/hora/professor
 
 #### Arquitetura
  ![](media/arch.jpeg)
+
+
+### Configurar o Ambiente de Desenvolvimento
+
+#### Docker DB
+TBA
+#### On Premises Gateway
+TBA
+#### Versionamento do Git
+TBA
+
 
 ### Referências
 
