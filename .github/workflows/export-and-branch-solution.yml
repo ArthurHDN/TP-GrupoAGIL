@@ -25,14 +25,14 @@ jobs:
       with:
         environment-url: 'https://orgb17368b1.crm.dynamics.com'
         user-name: 'arthurhdn@ufmg.br'
-        password-secret: ${{ secrets.ARTHURHDN_MINHAUFMG_PASSWORD }}
+        password-secret: ${{ secrets.arthurhdn_minhaufmg_password }}
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://orgb17368b1.crm.dynamics.com'
         user-name: 'arthurhdn@ufmg.br'
-        password-secret: ${{ secrets.ARTHURHDN_MINHAUFMG_PASSWORD }}
+        password-secret: ${{ secrets.arthurhdn_minhaufmg_password }}
         solution-name: AGILiMonitorias
         solution-output-file: out/exported/ALMLab.zip
 
