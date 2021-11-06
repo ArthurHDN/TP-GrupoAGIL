@@ -18,31 +18,52 @@ O projeto tem como objetivo conectar professores (graduados ou não) da UFMG - p
 #### Backlog do Produto
 
 Glossário:
+
 Usuário -> Professor ou Estudante
+
 Aula -> idioma/hora/professor 
 
-| História | Como um | Eu quero | De forma que eu | Release 1. |
-|----------|---------|----------|--------------|------------|
+| História | Como um | Eu quero | De forma que eu | Sprint 1 |
+|----------|---------|----------|-----------------|----------|
 | 1 | Usuário | Fazer um cadastro | Preencha meu perfil para que os outros me encontrem | [X] |
 | 2 | Usuário | Ao fazer o cadastro, logar com meu @ufmg | Preencha alguns dados do perfil automaticamente | [X] |
-| 3 | Usuário | Acessar meu perfil | Modificá-lo | [ ] |
-| 4 | Estudante | Visualizar e pesquisar por idioma e data | Eu encontre professores capacitados disponíveis | [X] |
+| 3 | Usuário | Acessar meu perfil | Consiga modificá-lo | [ ] |
+| 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | [X] |
 | 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | [X] |
-| 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recursar baseado no perfil | [ ] |
+| 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recusar baseado no perfil | [ ] |
 | 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | [X] |
 | 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | [ ] |
 | 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | [ ] |
 | 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | [ ] | 
 
 
-#### Principais funcionalidades
+#### Equipe
 
-- cadastro de professores e alunos, atrelado ao domínio @ufmg
-- alunos podem procurar professores de acordo com o idioma e horário
-- professores podem aceitar ou não as solicitações
-- agendamento de evento no Teams em caso de aceite
+- **A**rthur Henrique Dias Nunes - Backend - Database
+- **G**abriel Pimentel Gomes - Frontend
+- **I**gor Menezes Radichi - Backend - Automation
+- **L**ucas Gabriel Santana - Frontend
 
-#### Tecnologias
+#### Backlog do Sprint 1
+- História 1:
+-- Definir a estrutura do Banco de Dados para o usuário:
+
+-- Implementar a estrutura no banco de dados. Iniciar o banco de dados:
+
+-- Adicionar tabela como fonte de dados:
+
+-- Implementar a interface para o cadastro:
+
+- História 2
+
+- História 4
+
+- História 5
+
+- História 7
+
+
+### Tecnologias
 
 - Banco de dados (mySQL ou PostgreSQL)
 - On-premises gateway (ponte com a nuvem)
