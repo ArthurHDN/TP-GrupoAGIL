@@ -46,12 +46,14 @@ Aula -> idioma/hora/professor
 
 #### Backlog do Sprint 1
 - História 0:
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Explicar o versionamento do Frontend | Igor/Lucas |
 | Implementar o banco de dados em docker | Arthur |
 
 - História 1:
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Definir a estrutura do Banco de Dados para o usuário | Igor |
@@ -60,23 +62,27 @@ Aula -> idioma/hora/professor
 | Implementar a interface para o cadastro | Lucas |
 
 - História 2
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel |
 | Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas |
 
 - História 4
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Implementar a pesquisa na tela | Lucas |
 | Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel |
 
 - História 5
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Implementar a interface para solicitar a reserva de uma aula | Gabriel |
 
 - História 7
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur |
@@ -84,6 +90,7 @@ Aula -> idioma/hora/professor
 | Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas |
 
 - História 10
+
 | Tarefa | Responsável |
 |--------|-------------|
 | Automação com o Teams para marcar/desmarcar eventos | Igor |
