@@ -24,15 +24,15 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: 'https://orge5653d83.crm.dynamics.com/'
-        user-name: 'arthurhdn@ufmg.br'
-        password-secret: ${{ secrets.password }}
+        user-name: 'igorradichi@ufmg.br'
+        password-secret: 'TesteAGIL2021'
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://orge5653d83.crm.dynamics.com/'
-        user-name: 'arthurhdn@ufmg.br'
-        password-secret: ${{ secrets.password }}
+        user-name: 'igorradichi@ufmg.br'
+        password-secret: 'TesteAGIL2021'
         solution-name: DPE_001Admisso
         solution-output-file: out/exported/ALMLab.zip
 
