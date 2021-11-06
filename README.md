@@ -26,13 +26,12 @@ Aula -> idioma/hora/professor
 | 1 | Usuário | Fazer um cadastro | Preencha meu perfil para que os outros me encontrem | [X] |
 | 2 | Usuário | Ao fazer o cadastro, logar com meu @ufmg | Preencha alguns dados do perfil automaticamente | [X] |
 | 3 | Usuário | Acessar meu perfil | Modificá-lo | [ ] |
-| 4 | Estudante | Pesquisar por idioma e data | Eu encontre professores capacitados disponíveis | [X] |
+| 4 | Estudante | Visualizar e pesquisar por idioma e data | Eu encontre professores capacitados disponíveis | [X] |
 | 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | [X] |
 | 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recursar baseado no perfil | [ ] |
 | 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | [X] |
-| 8 | Estudante | Entrar no aplicativo | Veja uma lista dos professores disponíveis | [ ] |
-| 9 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | [ ] |
-| 10 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | [ ] |
+| 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | [ ] |
+| 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | [ ] |
 
 
 #### Principais funcionalidades
