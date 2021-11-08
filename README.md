@@ -7,7 +7,7 @@
 ### Squad AGIL
 
 - **A**rthur Henrique Dias Nunes -2018020670
-- **G**abriel Pimentel Gomes - 2018020271 teste
+- **G**abriel Pimentel Gomes - 2018020271
 - **I**gor Menezes Radichi - 2018020441
 - **L**ucas Gabriel Santana - 2018072476
 
