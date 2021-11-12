@@ -1,10 +1,10 @@
 version: "3.2"
 services:
   mysql:
-    container_name: mysql-didyn
+    container_name: mysql-TP-AGIL
     build:
-      context: ./mysql/
-    image: mysql:didyn
+      dockerfile: Dockerfile
+      context: .
     networks:
       - backend
     environment:
@@ -13,41 +13,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql/data/db:/var/lib/mysql
-      - ./mysql/data/scripts:/scripts
-  node:
-    container_name: node-didyn
-    build:
-      context: ./node/
-    image: node:didyn
-    command: npm start
-    networks:
-      - frontend
-      - backend
-    links:
-      - mysql
-    volumes:
-      - ./node/src:/home/node/app
-    ports:
-      - "9001:9001"
-    depends_on:
-      - mysql
-    restart: always
-  php:
-    container_name: php-didyn
-    build:
-      context: ./php/
-    image: php:didyn
-    links:
-      - node
-    networks:
-      - frontend
-    volumes:
-      - ./php/www:/var/www/html
-    ports:
-      - "8888:80"
-    depends_on:
-      - node
+      - ./data/db:/var/lib/mysql
+      - ./data/scripts:/scripts
 networks:
-  frontend:
   backend:
