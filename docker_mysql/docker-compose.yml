@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+  mysql:
+    container_name: mysql-TP-AGIL
+    build:
+      dockerfile: Dockerfile
+      context: .
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=ddpwd
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/db:/var/lib/mysql
+      - ./data/scripts:/scripts
+networks:
+  backend:

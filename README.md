@@ -116,8 +116,8 @@ Aula -> idioma/hora/professor
 
 ### Configurar o Ambiente de Desenvolvimento
 
-#### Docker DB
-TBA
+1. (Opcional) [Configure e inicie a sua base de dados docker](/docker-mysql/).
+
 #### On Premises Gateway
 TBA
 #### Versionamento do Git
