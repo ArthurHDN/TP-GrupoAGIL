@@ -116,7 +116,7 @@ Aula -> idioma/hora/professor
 
 ### Configurar o Ambiente de Desenvolvimento
 
-1. (Opcional) [Configure e inicie a sua base de dados docker](./docker-mysql/README.md).
+1. (Opcional) [Configure e inicie a sua base de dados docker](/docker-mysql/README.md).
 
 #### On Premises Gateway
 TBA
