@@ -1,6 +1,6 @@
 # Execução
 
-1. Após realizadas as modificações na solução, acessar o repositório e navegar até as [GitHub Actions](https://github.com/ArthurHDN/TP-GrupoAGIL/actions)
+1. Após realizadas as modificações na solução, acessar o repositório e navegar até as [GitHub Actions](https://github.com/ArthurHDN/TP-GrupoAGIL/actions).
 
 2. Acessar e executar o workflow `export-and-branch-solution`
 
