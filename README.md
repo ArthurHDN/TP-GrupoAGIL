@@ -28,16 +28,16 @@ Aula -> idioma/hora/professor
 
 | História | Como um | Eu quero | De forma que eu | Sprint 1 |
 |----------|---------|----------|-----------------|----------|
-| 1 | Usuário | Fazer um cadastro | Preencha meu perfil para que os outros me encontrem | [X] |
-| 2 | Usuário | Fazer o cadastro com meu @ufmg | Preencha alguns dados do perfil automaticamente | [X] |
-| 3 | Usuário | Acessar meu perfil | Consiga modificá-lo | [ ] |
-| 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | [X] |
-| 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | [X] |
-| 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recusar baseado no perfil | [ ] |
-| 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | [X] |
-| 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | [ ] |
-| 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | [ ] |
-| 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | [ ] | 
+| 1 | Usuário | Fazer um cadastro | Preencha meu perfil para que os outros me encontrem | ☑️ |
+| 2 | Usuário | Fazer o cadastro com meu @ufmg | Preencha alguns dados do perfil automaticamente | ☑️ |
+| 3 | Usuário | Acessar meu perfil | Consiga modificá-lo | ☐ |
+| 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | ☑️ |
+| 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | ☑️ |
+| 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recusar baseado no perfil | ☐ |
+| 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
+| 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☐ |
+| 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☐ |
+| 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☐ |
 
 
 #### Equipe
@@ -102,12 +102,13 @@ Aula -> idioma/hora/professor
 
 ### Tecnologias
 
-- Banco de dados (mySQL ou PostgreSQL)
+- Docker
+- Banco de dados (mySQL)
 - On-premises gateway (ponte com a nuvem)
 - Power Platform (automations & app, na nuvem ou local)
 - Git/GitHub para versionamento de código
   - Utilização de Actions no GitHub para automatizar exports
-  - Utilização de decompilador via PowerShell para descompactar app exportado
+  - (opcional) PowerApps-Language-Tooling
 - Office 365 (Teams, Outlook, etc)
 
 #### Arquitetura
@@ -116,9 +117,16 @@ Aula -> idioma/hora/professor
 
 ### Configurar o Ambiente de Desenvolvimento
 
-1. (Opcional) [Configure e inicie a sua base de dados docker](/docker-mysql/).
+#### Banco de Dados Docker
+
+[Configure e inicie a sua base de dados docker](/docker-mysql/).
+
+#### GitHub Actions
+
+[Automatize o export da solução](/.github/workflows).
 
 #### On Premises Gateway
+
 TBA
 #### Versionamento do Git
 TBA
