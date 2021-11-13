@@ -31,3 +31,21 @@ docker exec -it mysql-TP-AGIL bash
 ```bash
 docker compose down
 ```
+
+# MySQL
+
+1. Uma vez com a docker em execução, para conectar ao servidor, utilize as credenciais:
+
+```bash
+mysql -uroot -p #enter password when asked
+```
+
+2. Para conectar à base de dados:
+
+```
+USE {database}
+```
+
+3. Então utilize os comandos desejados para modificar a base e suas tabelas.
+
+[MySQL commands cheatsheet](https://gist.github.com/hofmannsven/9164408)
