@@ -33,7 +33,7 @@ jobs:
         environment-url: 'https://orge5653d83.crm.dynamics.com/'
         user-name: 'igorradichi@ufmg.br'
         password-secret: 'TesteAGIL2021' #${{ secrets.password }}
-        solution-name: DPE_001Admisso
+        solution-name: AGILiMonitorias
         solution-output-file: out/exported/ALMLab.zip
 
     - name: unpack-solution action
