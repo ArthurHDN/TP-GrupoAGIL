@@ -119,7 +119,7 @@ Aula -> idioma/hora/professor
 
 #### Banco de Dados Docker
 
-[Configure e inicie a sua base de dados docker](/docker-mysql/).
+[Configure e inicie a sua base de dados docker](/docker_mysql/).
 
 #### GitHub Actions
 
@@ -127,7 +127,8 @@ Aula -> idioma/hora/professor
 
 #### On Premises Gateway
 
-TBA
+[Configure seu gateway padrão](/gateway).
+
 #### Versionamento do Git
 TBA
 
