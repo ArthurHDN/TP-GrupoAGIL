@@ -52,53 +52,53 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Definir a estrutura do Banco de Dados para o usuário | Igor | DONE |
-| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | DOING |
-| Adicionar tabela como fonte de dados | Gabriel | TODO |
-| Implementar a interface para o cadastro | Lucas | TODO |
+| Definir a estrutura do Banco de Dados para o usuário | Igor | ☑️ |
+| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | ⌛ |
+| Adicionar tabela como fonte de dados | Gabriel | ☐ |
+| Implementar a interface para o cadastro | Lucas | ☐ |
 
 - História 2
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | TODO |
-| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | TODO |
+| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | ☐ |
+| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | ☐ |
 
 - História 4
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Implementar a pesquisa na tela | Lucas | TODO |
-| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | TODO |
+| Implementar a pesquisa na tela | Lucas | ☐ |
+| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | ☐ |
 
 - História 5
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Implementar a interface para solicitar a reserva de uma aula | Gabriel | TODO |
+| Implementar a interface para solicitar a reserva de uma aula | Gabriel | ☐ |
 
 - História 7
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | TODO |
-| Implementar a estrutura no banco de dados | Igor | TODO |
-| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | TODO |
+| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | ☐ |
+| Implementar a estrutura no banco de dados | Igor | ☐ |
+| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☐ |
 
 - História 10
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Automação com o Teams para marcar/desmarcar eventos | Igor | TODO |
-| Integrar automação à criação de Solicitações | Lucas | TODO |
+| Automação com o Teams para marcar/desmarcar eventos | Igor | ☐ |
+| Integrar automação à criação de Solicitações | Lucas | ☐ |
 
 - História 0 (Outras tarefas):
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Explicar o versionamento do Frontend | Lucas | DONE |
-| Criar Github Action | Igor | DONE |
-| Implementar o banco de dados em docker | Arthur | DONE |
+| Definir versionamento do Frontend | Lucas | ☑️ |
+| Criar Github Action | Igor | ☑️ |
+| Implementar o banco de dados em docker | Arthur | ☑️ |
 
 ### Tecnologias
 
