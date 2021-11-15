@@ -124,16 +124,17 @@ Aula -> idioma/hora/professor
 
 [Configure e inicie a sua base de dados docker](/docker_mysql/).
 
-#### GitHub Actions
-
-[Automatize o export da solução](/.github/workflows).
-
 #### On Premises Gateway
 
 [Configure seu gateway padrão](/gateway).
 
+#### GitHub Actions
+
+[Automatize o export da solução](/.github/workflows).
+
 #### Versionamento do Git
-TBA
+
+Ao implementar uma nova feature, faça como [o gitflow definido](/.github/gitflow).
 
 
 ### Referências
