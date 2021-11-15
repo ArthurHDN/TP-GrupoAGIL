@@ -52,8 +52,8 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Definir a estrutura do Banco de Dados para o usuário | Igor | TODO |
-| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | TODO |
+| Definir a estrutura do Banco de Dados para o usuário | Igor | DONE |
+| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | DOING |
 | Adicionar tabela como fonte de dados | Gabriel | TODO |
 | Implementar a interface para o cadastro | Lucas | TODO |
 
@@ -96,9 +96,9 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Explicar o versionamento do Frontend | Lucas | TODO |
-| Criar Github Action | Igor | TODO |
-| Implementar o banco de dados em docker | Arthur | DOING |
+| Explicar o versionamento do Frontend | Lucas | DONE |
+| Criar Github Action | Igor | DONE |
+| Implementar o banco de dados em docker | Arthur | DONE |
 
 ### Tecnologias
 
