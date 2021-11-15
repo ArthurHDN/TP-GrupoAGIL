@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>new_imonitorias_121a5</Name>
+  <AppVersion>2021-11-15T20:23:42Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.21102.25.0</CreatedByClientVersion>
+  <MinClientVersion>3.21102.25.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"0bbadd07-639c-4c73-8d5b-b9b4cef6f27f","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.21102.25","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>iMonitorias</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"d2493f60-77fa-4043-9ecf-32a41f5070ec":{"id":"/providers/microsoft.powerapps/apis/shared_mysql","displayName":"MySQL","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1533/1.0.1533.2600/mysql/icon.png","dataSources":["imonitorias.bookings","imonitorias.classes","imonitorias.languages","imonitorias.users"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"gatewayObjectIdHint":"160eb2ad-3754-4c81-a8e6-240f5c028618","isOnPremiseConnection":true,"sharedConnectionId":"1e30a127-79d3-4630-97b5-f18a83572f3e","dataSets":{"default":{"dataSources":{"imonitorias.bookings":{"tableName":"[imonitorias].[bookings]"},"imonitorias.classes":{"tableName":"[imonitorias].[classes]"},"imonitorias.languages":{"tableName":"[imonitorias].[languages]"},"imonitorias.users":{"tableName":"[imonitorias].[users]"}}}},"apiTier":"Premium","actions":["providers/PowerPlatform.Governance/Operations/Read"]}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/new_imonitorias_121a5_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/new_imonitorias_121a5_DocumentUri.msapp</DocumentUri>
+</CanvasApp>
