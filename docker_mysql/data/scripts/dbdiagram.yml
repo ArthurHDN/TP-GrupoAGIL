@@ -1,0 +1,31 @@
+// Story 1,2
+Table languages {
+id int [pk, increment]
+lang varchar
+}
+
+Table users {
+id int [pk, increment]
+username varchar
+usertype varchar
+}
+
+// Story 4,5,7
+Table classes {
+id int [pk,increment]
+teacher int
+lang int
+begin datetime
+end datetime
+free boolean
+}
+Ref: classes.teacher > users.id
+Ref: classes.lang > languages.id
+
+Table bookings {
+id int [pk,increment]
+student int
+class int
+}
+Ref: bookings.student > users.id
+Ref: bookings.class > classes.id

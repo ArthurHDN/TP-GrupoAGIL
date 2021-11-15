@@ -1,6 +1,6 @@
 # Trabalho Prático
 
-## Programa de Monitoria de Idiomas na UFMG
+## iMonitorias - Programa de Monitoria de Idiomas na UFMG
 
 ## DCC603 - Engenharia de Software
 
@@ -114,6 +114,9 @@ Aula -> idioma/hora/professor
 #### Arquitetura
  ![](media/arch.jpeg)
 
+#### Diagrama de banco de dados relacional
+
+![](media/db_diagram.PNG)
 
 ### Configurar o Ambiente de Desenvolvimento
 
