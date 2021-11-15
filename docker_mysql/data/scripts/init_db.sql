@@ -1,31 +1,38 @@
-CREATE DATABASE IF NOT EXISTS diomar_tkd;
-USE diomar_tkd;
+CREATE DATABASE IF NOT EXISTS iMonitorias;
+USE iMonitorias;
 
-CREATE TABLE IF NOT EXISTS exame_faixa (
-  id INT(11) AUTO_INCREMENT,
-  nome VARCHAR(255),
-  gub_atual INT(11),
-  gub_novo INT(11),
-  sagui DECIMAL(10, 2),
-  sonkisul DECIMAL(10, 2),
-  balkisul DECIMAL(10, 2),
-  sibon_donjak_1 DECIMAL(10,2),
-  sibon_donjak_2 DECIMAL(10,2),
-  tecnicas_9_10_gub_1 DECIMAL(10,2),
-  tecnicas_9_10_gub_2 DECIMAL(10,2),
-  tecnicas_9_10_gub_3 DECIMAL(10,2),
-  taeguk_1 DECIMAL(10,2),
-  taeguk_2 DECIMAL(10,2),
-  taeguk_3 DECIMAL(10,2),
-  matchuhu_kyorugui DECIMAL(10,2),
-  kyorugui DECIMAL(10,2),
-  kyopa DECIMAL(10,2),
-  avaliacao_periodica DECIMAL(10,2),
-  avaliacao DECIMAL(10,2),
-  pontuacao DECIMAL(10,2),
-  foto_url VARCHAR(255),
-  visivel BOOLEAN,
+CREATE TABLE IF NOT EXISTS languages(
+  id INT(11) UNIQUE AUTO_INCREMENT,
+  lang VARCHAR(255),
   PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS users(
+  id INT(11) UNIQUE AUTO_INCREMENT,
+  username VARCHAR(255),
+  usertype VARCHAR(255),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS classes(
+  id INT(11) UNIQUE AUTO_INCREMENT,
+  teacher INT(11),
+  lang INT(11),
+  begindate DATETIME,
+  enddate DATETIME,
+  free BOOLEAN,
+  PRIMARY KEY (id),
+  FOREIGN KEY (teacher) REFERENCES users(id),
+  FOREIGN KEY (lang) REFERENCES languages(id)
+);
+
+CREATE TABLE IF NOT EXISTS bookings(
+  id INT(11) UNIQUE AUTO_INCREMENT,
+  student INT(11),
+  class INT(11),
+  PRIMARY KEY (id),
+  FOREIGN KEY (student) REFERENCES users(id),
+  FOREIGN KEY (class) REFERENCES classes(id)
 );
 
 -- INSERT INTO products VALUE(0, 'Curso Front-end especialista', 2500);
