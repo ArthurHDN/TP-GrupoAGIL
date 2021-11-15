@@ -21,5 +21,5 @@ Uma vez instalado o banco via Docker ([tutorial](https://github.com/ArthurHDN/TP
    - Nome do banco de dados: `iMonitorias`
    - Tipo de Autenticação: `Basic`
    - Nome de usuário: `root`
-   - Senha: `root`
+   - Senha: `ddpwd`
    - Escolher um gateway: `AGIL-iMonitorias-Nome`
