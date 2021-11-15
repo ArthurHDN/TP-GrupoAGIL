@@ -34,16 +34,22 @@ docker compose down
 
 # MySQL
 
-1. Uma vez com a docker em execução, para conectar ao servidor, utilize as credenciais:
+1. Uma vez dentro do container docker em execução, para conectar ao servidor, utilize as credenciais:
 
 ```bash
-mysql -uroot -p #enter password when asked
+mysql -uroot -p #enter password 'ddpwd' when asked
+```
+
+Alterntivamente, també é possível rodar um script sql por meio de:
+
+```bash
+mysql -uroot -pddpwd < /scripts/<meu_script>.sql
 ```
 
 2. Para conectar à base de dados:
 
 ```
-USE {database}
+USE <database>;
 ```
 
 3. Então utilize os comandos desejados para modificar a base e suas tabelas.
