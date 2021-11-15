@@ -14,7 +14,7 @@
 
 Uma vez instalado o banco via Docker ([tutorial](https://github.com/ArthurHDN/TP-GrupoAGIL/tree/main/docker_mysql)), siga os seguintes passos:
 
-1. Acesse o [Powerapps](https://make.powerapps.com/) e navegue até suas conexões (barra lateral esquerda > Dados > Conexões
+1. Acesse o [Powerapps](https://make.powerapps.com/) e navegue até suas conexões (barra lateral esquerda > Dados > Conexões)
 2. Crie uma **nova conexão** e pesquise por `MySQL` (caso seja requisitado uma conta premium, apenas aceite o trial)
 3. Na tela de configurações que se abre, preencha-a da seguinte maneira:
    - Servidor: `localhost`
