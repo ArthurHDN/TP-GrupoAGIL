@@ -53,7 +53,7 @@ Aula -> idioma/hora/professor
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
 | Definir a estrutura do Banco de Dados para o usuário | Igor | ☑️ |
-| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | ⌛ |
+| Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | ☑️ |
 | Adicionar tabela como fonte de dados | Gabriel | ☐ |
 | Implementar a interface para o cadastro | Lucas | ☐ |
 
@@ -81,8 +81,8 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | ☐ |
-| Implementar a estrutura no banco de dados | Igor | ☐ |
+| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | ☑️ |
+| Implementar a estrutura no banco de dados | Igor | ☑️ |
 | Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☐ |
 
 - História 10
@@ -106,7 +106,7 @@ Aula -> idioma/hora/professor
 - Banco de dados (mySQL)
 - On-premises gateway (ponte com a nuvem)
 - Power Platform (automations & app, na nuvem ou local)
-- Git/GitHub para versionamento de código
+- GitHub para versionamento de código
   - Utilização de Actions no GitHub para automatizar exports
   - (opcional) PowerApps-Language-Tooling
 - Office 365 (Teams, Outlook, etc)
