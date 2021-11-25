@@ -61,8 +61,8 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | ☐ |
-| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | ☐ |
+| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | ☑️ |
+| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | ☑️ |
 
 - História 4
 
