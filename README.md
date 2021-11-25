@@ -61,15 +61,15 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | ☑️ |
-| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | ☑️ |
+| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | :hourglass: |
+| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | :hourglass: |
 
 - História 4
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Implementar a pesquisa na tela | Lucas | ☐ |
-| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | ☐ |
+| Implementar a pesquisa na tela | Lucas | :hourglass: |
+| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | :hourglass: |
 
 - História 5
 
