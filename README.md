@@ -55,14 +55,14 @@ Aula -> idioma/hora/professor
 | Definir a estrutura do Banco de Dados para o usuário | Igor | ☑️ |
 | Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | ☑️ |
 | Adicionar tabela como fonte de dados | Gabriel | ☑️ |
-| Implementar a interface para o cadastro | Lucas | :hourglass: |
+| Implementar a interface para o cadastro | Lucas | ☑️ |
 
 - História 2
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | :hourglass: |
-| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | :hourglass: |
+| Coletar as informações (usuário, email, etc) do login da ufmg | Gabriel | ☑️ |
+| Implementar lógica responsável por verificar se o usuário já está cadastrado | Lucas | ☑️ |
 
 - História 4
 
