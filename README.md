@@ -55,7 +55,7 @@ Aula -> idioma/hora/professor
 | Definir a estrutura do Banco de Dados para o usuário | Igor | ☑️ |
 | Implementar a estrutura no banco de dados. Iniciar o banco de dados | Arthur | ☑️ |
 | Adicionar tabela como fonte de dados | Gabriel | ☑️ |
-| Implementar a interface para o cadastro | Lucas | ☐ |
+| Implementar a interface para o cadastro | Lucas | :hourglass: |
 
 - História 2
 
