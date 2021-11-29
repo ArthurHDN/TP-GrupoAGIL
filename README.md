@@ -37,7 +37,7 @@ Aula -> idioma/hora/professor
 | 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
 | 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☐ |
 | 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☐ |
-| 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☐ |
+| 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☑️ |
 
 
 #### Equipe
