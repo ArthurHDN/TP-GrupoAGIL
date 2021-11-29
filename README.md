@@ -81,14 +81,16 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Definir a estrutura do Banco de Dados para as "agendas" dos professores | Arthur | ☑️ |
-| Implementar a estrutura no banco de dados | Igor | ☑️ |
+| Definir estrutura do banco para as aulas disponíveis         | Igor        | ☑️      |
+| Implementar a estrutura no banco de dados                    | Arthur | ☑️ |
 | Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☐ |
 
 - História 10
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
+| Definir estrutura do banco para os eventos marcados | Igor | ☑️ |
+| Implementar a estrutura no banco de dados | Arthur | ☑️ |
 | Automação com o Teams para marcar/desmarcar eventos | Igor | ☐ |
 | Integrar automação à criação de Solicitações | Lucas | ☐ |
 
@@ -96,9 +98,10 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
+| Implementar o banco de dados em docker           | Arthur      | ☑️      |
+| Configurar gateway para conectar o banco à nuvem | Igor        | ☑️      |
+| Criar Github Action                              | Igor        | ☑️      |
 | Definir versionamento do Frontend | Lucas | ☑️ |
-| Criar Github Action | Igor | ☑️ |
-| Implementar o banco de dados em docker | Arthur | ☑️ |
 
 ### Tecnologias
 
