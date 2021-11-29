@@ -24,14 +24,14 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: 'https://orge5653d83.crm.dynamics.com/'
-        user-name: 'igorradichi@ufmg.br'
+        user-name: 'lucasgs@ufmg.br'
         password-secret: ${{ secrets.password }}
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: 'https://orge5653d83.crm.dynamics.com/'
-        user-name: 'igorradichi@ufmg.br'
+        user-name: 'lucasgs@ufmg.br'
         password-secret: ${{ secrets.password }}
         solution-name: AGILiMonitorias
         solution-output-file: out/exported/ALMLab.zip
