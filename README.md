@@ -83,7 +83,7 @@ Aula -> idioma/hora/professor
 |--------|-------------|--------|
 | Definir estrutura do banco para as aulas disponíveis         | Igor        | ☑️      |
 | Implementar a estrutura no banco de dados                    | Arthur | ☑️ |
-| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☐ |
+| Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☑️ |
 
 - História 10
 
