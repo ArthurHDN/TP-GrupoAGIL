@@ -68,8 +68,8 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Implementar a pesquisa na tela | Lucas | :hourglass: |
-| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | :hourglass: |
+| Implementar a pesquisa na tela | Lucas | ☑️ |
+| Mostras os resultados (mesmo sem pesquisa) na tela | Gabriel | ☑️ |
 
 - História 5
 
