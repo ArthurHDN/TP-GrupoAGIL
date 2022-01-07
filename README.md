@@ -75,7 +75,7 @@ Aula -> idioma/hora/professor
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
-| Implementar a interface para solicitar a reserva de uma aula | Gabriel | ☐ |
+| Implementar a interface para solicitar a reserva de uma aula | Gabriel | ☑️ |
 
 - História 7
 
