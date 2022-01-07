@@ -91,8 +91,8 @@ Aula -> idioma/hora/professor
 |--------|-------------|--------|
 | Definir estrutura do banco para os eventos marcados | Igor | ☑️ |
 | Implementar a estrutura no banco de dados | Arthur | ☑️ |
-| Automação com o Teams para marcar/desmarcar eventos | Igor | ☐ |
-| Integrar automação à criação de Solicitações | Lucas | ☐ |
+| Automação com o Teams para marcar/desmarcar eventos | Igor | ⚠️ |
+| Integrar automação à criação de Solicitações | Lucas | ☑️ |
 
 - História 0 (Outras tarefas):
 
