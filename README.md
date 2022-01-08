@@ -34,9 +34,9 @@ Aula -> idioma/hora/professor
 | 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | ☑️ |
 | 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | ☑️ |
 | 6 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
-| 7 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ⚠️ |
-| 8 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ⚠️ |
-| 9 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ⚠️ |
+| 7 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☑️ |
+| 8 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☑️ |
+| 9 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☑️ |
 
 
 #### Equipe
