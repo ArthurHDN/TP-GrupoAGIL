@@ -33,11 +33,10 @@ Aula -> idioma/hora/professor
 | 3 | Usuário | Acessar meu perfil | Consiga modificá-lo | ☐ |
 | 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | ☑️ |
 | 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | ☑️ |
-| 6 | Professor | Ver quem quer me reservar | Consiga aceitar ou recusar baseado no perfil | ☐ |
-| 7 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
-| 8 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☐ |
-| 9 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☐ |
-| 10 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☑️ |
+| 6 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
+| 7 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☐ |
+| 8 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☐ |
+| 9 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☑️ |
 
 
 #### Equipe
@@ -77,7 +76,7 @@ Aula -> idioma/hora/professor
 |--------|-------------|--------|
 | Implementar a interface para solicitar a reserva de uma aula | Gabriel | ☑️ |
 
-- História 7
+- História 6
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
@@ -85,7 +84,7 @@ Aula -> idioma/hora/professor
 | Implementar a estrutura no banco de dados                    | Arthur | ☑️ |
 | Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☑️ |
 
-- História 10
+- História 9
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
