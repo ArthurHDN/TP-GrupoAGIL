@@ -34,8 +34,8 @@ Aula -> idioma/hora/professor
 | 4 | Estudante | Visualizar e pesquisar por idioma e data | Encontre professores capacitados disponíveis | ☑️ |
 | 5 | Estudante | Selecionar uma aula  | Consiga fazer uma reserva | ☑️ |
 | 6 | Professor | Entrar na minha agenda | Colocar meus horários disponíveis | ☑️ |
-| 7 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros | ☐ |
-| 8 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ☐ |
+| 7 | Usuário | Entrar no aplicativo | Veja meus compromissos passados e futuros |⚠️|
+| 8 | Usuário | Acessar um compromissos | Cancelá-la ou solicitar para remarcar | ⚠️ |
 | 9 | Usuário | Integração com o Teams | Tenha o evento automaticamente marcado ou desmarcado | ☑️ |
 
 
@@ -84,13 +84,28 @@ Aula -> idioma/hora/professor
 | Implementar a estrutura no banco de dados                    | Arthur | ☑️ |
 | Implementar a interface para selecionar/adicionar/remover entradas na "agenda" do professor | Lucas | ☑️ |
 
+- História 7
+
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Implementar a interface para visualizar compromissos futuros | Gabriel | ☑️ |
+| Implementar a interface para visualizar compromissos passados | Lucas | ⚠️ |
+
+- História 8
+
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Implementar a interface para desmarcar compromissos | Lucas | ☑️ |
+| Implementar a interface para remarcar compromissos | Gabriel | ⚠️ |
+
 - História 9
 
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
 | Definir estrutura do banco para os eventos marcados | Igor | ☑️ |
 | Implementar a estrutura no banco de dados | Arthur | ☑️ |
-| Automação com o Teams para marcar/desmarcar eventos | Igor | ☑️ |
+| Automação com o Teams para marcar eventos | Igor | ☑️ |
+| Automação com o Teams para desmarcar eventos | Igor | ⚠️ |
 | Integrar automação à criação de Solicitações | Lucas | ☑️ |
 
 - História 0 (Outras tarefas):
